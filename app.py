@@ -9,8 +9,8 @@ from flores200_codes import flores_codes
 def load_models():
     # build model and tokenizer
     model_name_dict = {'nllb-distilled-600M': 'facebook/nllb-200-distilled-600M',
-                  'nllb-1.3B': 'facebook/nllb-200-1.3B',
-                  'nllb-distilled-1.3B': 'facebook/nllb-200-distilled-1.3B',
+                  #'nllb-1.3B': 'facebook/nllb-200-1.3B',
+                  #'nllb-distilled-1.3B': 'facebook/nllb-200-distilled-1.3B',
                   #'nllb-3.3B': 'facebook/nllb-200-3.3B',
                   }
 
@@ -56,20 +56,20 @@ if __name__ == '__main__':
     
     # define gradio demo
     lang_codes = list(flores_codes.keys())
-    inputs = [gr.inputs.Radio(['nllb-distilled-600M', 'nllb-1.3B', 'nllb-distilled-1.3B'], label='NLLB Model'),
-              gr.inputs.Dropdown(lang_codes, label='Source'),
+    #inputs = [gr.inputs.Radio(['nllb-distilled-600M', 'nllb-1.3B', 'nllb-distilled-1.3B'], label='NLLB Model'),
+    inputs = [gr.inputs.Dropdown(lang_codes, label='Source'),
               gr.inputs.Dropdown(lang_codes, label='Target'),
               gr.inputs.Textbox(lines=5, label="Input text"),
               ]
 
     outputs = gr.outputs.JSON()
 
-    title = "NLLB demo"
+    title = "NLLB distilled 600M demo"
 
     demo_status = "Demo is running on CPU"
     description = f"Details: https://github.com/facebookresearch/fairseq/tree/nllb. {demo_status}"
     examples = [
-    ['nllb-distilled-600M', 'English', 'Korean', 'Hi. nice to meet you']
+    ['English', 'Korean', 'Hi. nice to meet you']
     ]
 
     gr.Interface(translation,
