@@ -60,8 +60,8 @@ if __name__ == '__main__':
     # define gradio demo
     lang_codes = list(flores_codes.keys())
     #inputs = [gr.inputs.Radio(['nllb-distilled-600M', 'nllb-1.3B', 'nllb-distilled-1.3B'], label='NLLB Model'),
-    inputs = [gr.inputs.Dropdown(lang_codes, label='Source'),
-              gr.inputs.Dropdown(lang_codes, label='Target'),
+    inputs = [gr.inputs.Dropdown(lang_codes, default='English', label='Source'),
+              gr.inputs.Dropdown(lang_codes, default='Korean', label='Target'),
               gr.inputs.Textbox(lines=5, label="Input text"),
               ]
 
