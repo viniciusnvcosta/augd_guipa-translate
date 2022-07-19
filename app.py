@@ -26,7 +26,7 @@ def load_models():
     return model_dict
 
 
-def translation(model_name, source, target, text):
+def translation(source, target, text):
     start_time = time.time()
     source = flores_codes[source]
     target = flores_codes[target]
