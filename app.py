@@ -27,6 +27,9 @@ def load_models():
 
 
 def translation(source, target, text):
+    if len(model_dict) == 2:
+        model_name = 'nllb-distilled-600M'
+
     start_time = time.time()
     source = flores_codes[source]
     target = flores_codes[target]
