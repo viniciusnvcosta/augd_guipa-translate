@@ -80,8 +80,6 @@ if __name__ == '__main__':
                  outputs,
                  title=title,
                  description=description,
-                 examples=examples,
-                 examples_per_page=50,
                  ).launch()
 
 
