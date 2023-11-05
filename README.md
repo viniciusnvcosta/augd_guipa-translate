@@ -1,6 +1,6 @@
 ---
-title: Nllb Translation Demo
-emoji: 👀
+title: Guipa Translate Demo
+emoji: 💲
 colorFrom: indigo
 colorTo: green
 sdk: gradio

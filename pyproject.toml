@@ -1,0 +1,21 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "guipa-translate"
+version = "0.1.0"
+description = "A simple documentation translator for devs."
+authors = ["viniciusnvcosta <viniciusnvcosta47@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.21.4"
+pandas = "^2"
+nltk = "^3.6.5"
+torch = "^1.10.0"
+transformers = "^4.11.3"
+jupyter_client = "^7.1.0"
+ipykernel = "^6.4.2"
+gradio = "^3.2.0"
